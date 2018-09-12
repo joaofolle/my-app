@@ -21,32 +21,32 @@
       <ion-avatar item-start>
         <img src="assets/imgs/avatar.png">
       </ion-avatar>
-      <h2 class="feedTitle">{{ nomeUsuario }}</h2>
-      <p class="feedDate">November 5, 1955</p>
+      <h2 class="feedTitle">{{ feedObject.titulo }}</h2>
+      <p class="feedDate">{{ feedObject.data }}</p>
     </ion-item>
 
     <img src="assets/imgs/feed.png">
 
     <ion-card-content>
-      <p>estudando para fazer o myPoopy.</p>
+      <p>{{ feedObject.descricao }}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-start clear small>
           <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
+          <div>{{ feedObject.likes }} Likes</div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-start clear small>
           <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
+          <div>{{ feedObject.commments }} Comments</div>
         </button>
       </ion-col>
       <ion-col center text-center>
         <ion-note>
-          11h ago
+          {{ feedObject.hora_comments }}
         </ion-note>
       </ion-col>
     </ion-row>
